@@ -48,7 +48,7 @@ export default {
 @import "style/variables";
 #app {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   background-image: url("assets/background/blurred-bokeh-christmas-241820.jpg");
   background-size: cover;

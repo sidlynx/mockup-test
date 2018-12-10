@@ -32,10 +32,7 @@
             <div class="message">
               <fieldset>
                 <legend>Message</legend>
-                <textarea
-                  name=""
-                  id=""
-                ></textarea>
+                <textarea></textarea>
               </fieldset>
             </div>
             <div class="button">

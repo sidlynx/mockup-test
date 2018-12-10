@@ -8,6 +8,9 @@ import { VueMasonryPlugin } from "vue-masonry";
 import Notifications from "vue-notification";
 import "./registerServiceWorker";
 
+import VueCarousel from 'vue-carousel';
+Vue.use(VueCarousel);
+
 Vue.use(GeneralPlugin);
 Vue.directive("loading", loading);
 Vue.use(VueMasonryPlugin);
