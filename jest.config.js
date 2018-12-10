@@ -1,23 +1,45 @@
-module.exports = {
-  moduleFileExtensions: [
-    'js',
-    'jsx',
-    'json',
-    'vue'
-  ],
-  transform: {
-    '^.+\\.vue$': 'vue-jest',
-    '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
-    '^.+\\.jsx?$': 'babel-jest'
-  },
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
-  },
-  snapshotSerializers: [
-    'jest-serializer-vue'
-  ],
-  testMatch: [
-    '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
-  ],
-  testURL: 'http://localhost/'
-}
+module.exports =
+    {
+        "verbose": true,
+        "moduleFileExtensions": [
+            "js",
+            "vue",
+            "json"
+        ],
+        "moduleNameMapper": {
+            "^@/(.*)$": "<rootDir>/src/$1"
+        },
+        "transform": {
+            "^.+\\.js$": "<rootDir>/node_modules/babel-7-jest",
+            ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+        },
+        "snapshotSerializers": [
+            "<rootDir>/node_modules/jest-serializer-vue"
+        ],
+        "collectCoverage": true,
+        "collectCoverageFrom": [
+            "src/**/*.(js|vue)",
+            "!**/node_modules/**"
+        ],
+        "coverageReporters": ["cobertura",
+            "json",
+            "lcov",
+            "text-summary",
+            "clover",
+            "html"],
+        "coverageThreshold": {
+            "global": {
+                "branches": 80,
+                "functions": 80,
+                "lines": 80,
+                "statements": -10
+            }
+        },
+        "snapshotSerializers": [
+            "./node_modules/jest-serializer-vue"
+        ],
+        "transformIgnorePatterns": [],
+        "roots": [
+            "./tests/unit/jest/"
+        ]
+    }
