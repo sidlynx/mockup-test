@@ -1,7 +1,7 @@
 <template>
-  <div class="pricing">
-    <div class="header">Pricing</div>
-    <div class="items-holder">
+  <page>
+    <div slot="header">Pricing</div>
+    <div class="wrapper">
       <div
         class="item"
         v-for="(item,index) in items"
@@ -26,11 +26,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </page>
 </template>
 
 
 <script>
+import Page from "@/components/layout/page.vue";
 export default {
   data() {
     return {
@@ -61,74 +62,65 @@ All the way home I’ll be warm`.replace(/(?:\r\n|\r|\n)/g, "<br>"),
         }
       ]
     };
+  },
+  components: {
+    Page
   }
 };
 </script>
 <style lang="scss" scoped>
-.pricing {
-  display: flex;
-  flex-direction: column;
+.wrapper {
+  padding-top: 20px;
   height: 100%;
-  .header {
-    flex-basis: 150px;
-    text-align: center;
-    color: #fff;
-    font-size: 100px;
-    font-weight: bold;
-  }
-  .items-holder {
-    padding-top: 20px;
-    flex-basis: 100%;
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 50px;
-    .item {
-      flex-basis: 33.333333%;
-      padding: 0px 50px;
-
-      .box {
-        height: 100%;
-        background: white;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 50px;
+  .item {
+    flex-basis: 33.333333%;
+    padding: 0px 50px;
+    height: 100%;
+    .box {
+      height: 100%;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      border-radius: 60px;
+      .img {
+        flex-basis: 50%;
+        background-size: cover;
+        border-radius: 60px 60px 0px 0px;
+        &.img1 {
+          background-image: url("../assets/imgs/img1.jpg");
+        }
+        &.img2 {
+          background-image: url("../assets/imgs/img2.jpg");
+        }
+        &.img3 {
+          background-image: url("../assets/imgs/img3.jpg");
+        }
+      }
+      .info {
+        flex-basis: calc(50% + 50px);
+        margin-top: -50px;
+        background-color: white;
+        border-radius: 60px;
         display: flex;
         flex-direction: column;
-        border-radius: 60px;
-        .img {
+        .price {
           flex-basis: 50%;
-          background-size: cover;
-          border-radius: 60px 60px 0px 0px;
-          &.img1 {
-            background-image: url("../assets/imgs/img1.jpg");
-          }
-          &.img2 {
-            background-image: url("../assets/imgs/img2.jpg");
-          }
-          &.img3 {
-            background-image: url("../assets/imgs/img3.jpg");
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #9d0000;
+          font-size: 80px;
+          font-weight: bold;
+          sub {
+            font-size: 20px;
           }
         }
-        .info {
-          flex-basis: calc(50% + 50px);
-          margin-top: -50px;
-          background-color: white;
-          border-radius: 60px;
-          display: flex;
-          flex-direction: column;
-          .price {
-            flex-basis: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #9d0000;
-            font-size: 80px;
-            font-weight: bold;
-            sub {
-              font-size: 20px;
-            }
-          }
-          .description {
-            flex-basis: 50%;
-            text-align: center;
-          }
+        .description {
+          flex-basis: 50%;
+          text-align: center;
         }
       }
     }
