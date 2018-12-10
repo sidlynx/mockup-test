@@ -1,6 +1,13 @@
 <template>
   <aside>
     <ul class="">
+      <router-link
+        :to="'about'"
+        tag="li"
+      >
+        sdsc
+      </router-link>
+
       <template v-for="(item,index) of items">
         <router-link
           :to="item.route"
@@ -20,21 +27,6 @@
             </div>
           </template>
         </router-link>
-        <li
-          :key="index"
-          v-if="!!item.action"
-          @click="item.action"
-        >
-          <div class="icon center-vertical center-horizontal">
-            <span :class="'fa fa-' + [item.icon]"></span>
-          </div>
-          <div class="title center-vertical">
-            {{item.title}}
-          </div>
-          <div class="arrow center-vertical center-horizontal">
-            <span class="fa fa-chevron-right"></span>
-          </div>
-        </li>
       </template>
     </ul>
   </aside>
@@ -47,28 +39,23 @@ export default {
       items: [
         {
           icon: "user",
-          title: "Page1",
-          route: { name: "page1" }
+          title: "Home",
+          route: { name: "home" }
         },
         {
-          icon: "area-chart",
-          title: "Page2",
-          route: { name: "page2" }
-        },
-        {
-          icon: "balance-scale",
-          title: "Page3",
-          route: { name: "page3" }
-        },
-        {
-          icon: "calendar",
-          title: "Page4",
-          route: { name: "page4" }
-        },
-        {
-          icon: "info",
-          title: "About",
+          icon: "user",
+          title: "about",
           route: { name: "about" }
+        },
+        {
+          icon: "user",
+          title: "Contact",
+          route: { name: "contact" }
+        },
+        {
+          icon: "pricing",
+          title: "pricing",
+          route: { name: "pricing" }
         }
       ]
     };

@@ -40,7 +40,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "font-awesome/css/font-awesome.css";
 
-
+console.log(router)
 new Vue({
   router,
   store,

@@ -3,13 +3,17 @@ import Router from "vue-router";
 import routes from "./routes/index";
 Vue.use(Router);
 
+console.log("hna", routes)
+
 let router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
-  routes: routes
+  routes
 });
 
 router.beforeEach((to, from, next) => {
+  next();
+  /*
   let connected = !!localStorage.getItem("uuid");
   if (connected) {
     if (to.name === "guest") { next({ name: "home" }); }
@@ -19,6 +23,7 @@ router.beforeEach((to, from, next) => {
     if (to.name !== "guest") { next({ name: "guest" }); }
     else { next(); }
   }
+  */
 })
 
 export default router;
