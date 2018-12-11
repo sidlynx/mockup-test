@@ -17,6 +17,7 @@
               {{item.price}}€<sub>TTC</sub>
             </div>
             <div
+              style="font-size:20px;"
               class="description"
               v-html="item.description"
             >
@@ -31,7 +32,7 @@
 
 
 <script>
-import Page from "@/components/layout/page.vue";
+import Page from "./page.vue";
 export default {
   data() {
     return {

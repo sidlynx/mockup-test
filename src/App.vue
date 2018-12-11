@@ -73,7 +73,10 @@
         </router-link>
       </section>
     </div>
-    <div id="content">
+    <div
+      id="content"
+      :style="{paddingLeft:menu.expanded && $router.currentRoute.name == 'home' ? '400px' : '120px'}"
+    >
       <router-view />
     </div>
   </div>
@@ -99,6 +102,8 @@ export default {
   display: flex;
   background-image: url("assets/background/blurred-bokeh-christmas-241820.jpg");
   background-size: cover;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
   #menu {
     width: 120px;
     height: 100vh;

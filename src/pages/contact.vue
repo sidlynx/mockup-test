@@ -45,7 +45,7 @@
   </page>
 </template>
 <script>
-import Page from "@/components/layout/page.vue";
+import Page from "./page.vue";
 export default {
   components: {
     Page

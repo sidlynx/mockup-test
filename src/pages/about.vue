@@ -33,7 +33,10 @@
             </div>
             <div class="citation">
               <div class="holder">
-                <div class="text">
+                <div
+                  class="text"
+                  sstyle="font-family:Robotolight"
+                >
                   {{items[0].citation.text}}
                 </div>
                 <div class="from">- {{items[0].citation.from}}</div>
@@ -58,7 +61,7 @@
   </page>
 </template>
 <script>
-import Page from "@/components/layout/page.vue";
+import Page from "./page.vue";
 import { Carousel, Slide } from "vue-carousel";
 export default {
   data() {

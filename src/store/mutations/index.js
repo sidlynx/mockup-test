@@ -5,7 +5,4 @@ export default {
   logout: state => {
     state.me = undefined;
   },
-  toggleMenu: state => {
-    state.layout.menu.expanded = !state.layout.menu.expanded;
-  }
 };
