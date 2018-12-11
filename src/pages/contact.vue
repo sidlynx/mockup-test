@@ -78,7 +78,6 @@ export default {
         flex-direction: column;
         padding-bottom: 20px;
         height: 100%;
-        border: 1px solid grey;
         .full-name {
           flex-basis: 60px;
           flex: none;

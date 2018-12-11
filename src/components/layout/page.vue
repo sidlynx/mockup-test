@@ -1,5 +1,6 @@
 <template>
   <div class="page">
+    <div class="title">Holy Joly Christmas</div>
     <div class="header">
       <slot name="header" />
     </div>
@@ -16,6 +17,12 @@ export default {};
   display: flex;
   flex-direction: column;
   height: 100%;
+  .title {
+    color: #fff;
+    padding-left: 50px;
+    font-size: 30px;
+    font-weight: bold;
+  }
   .header {
     flex-basis: 150px;
     text-align: center;
