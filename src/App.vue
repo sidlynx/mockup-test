@@ -5,10 +5,14 @@
       :style="{width : menu.expanded ? '400px':'120px'}"
     >
       <section class="section-menu">
-        <div class="icon-holder">
+        <div
+          class="icon-holder"
+          style="margin-top:20px;"
+        >
           <img
             src="/public/icons/menu.svg"
             @click="menu.expanded = !menu.expanded"
+            :style="{float:menu.expanded ? 'right':false, marginRight : menu.expanded ? '30px' : false}"
           />
         </div>
       </section>
