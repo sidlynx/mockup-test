@@ -1,5 +1,9 @@
 # skill
 
+## Run the app from dist
+
+Unzip the archive dist.zip in an http server folder,and pont your browser to the root folder
+
 ## Project setup
 ```
 npm install
